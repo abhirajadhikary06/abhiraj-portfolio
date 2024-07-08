@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111111;
+    font-family: monospace;
+    color: #ffffff;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-container {
+    text-align: center;
+
+    
+}
+
+.error-text {
+    font-size: 24px; 
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.center-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.home-button {
+    margin-bottom: 50px;
+    margin-top: 40px;
+    padding: 10px 30px; /* Increased padding for more button area */
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+    border-radius: 5px; /* Slightly increased border radius */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    font-family: monospace;
+    font-size: 16px; /* Increased font size */
+}
+
+.home-button:hover {
+    background-color: #ffffff;
+    border-color: #0077ff;
+    color: black;
+}
+

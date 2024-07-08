@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blogs</title>
+    <link rel="stylesheet" href="{% static 'all_blogs.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="{% url 'portfolio' %}">Portfolio</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'store' %}">Store</a>
+            <a href="#top">Blogs</a>
+        </div>
+    </nav>
+
+    <header class="header" id="top">
+        <div class="header-content">
+            <h1>Blogbox</h1>
+            <p>Abhiraj is here to guide you with his amazing blogs.</p>
+        </div>
+    </header>
+
+    <section class="featured-blog">
+        <div class="featured-content">
+            <img src="{% static 'images/featured.png' %}" alt="Featured Blog Image" class="featured-image">
+            <div class="featured-text">
+                <h2>Participate in Spark-Wars 3.0</h2>
+                <div class="blog-details">
+                    <p>Spark-Wars 3.0 is an exciting initiative by Celebal Technologies Private Limited, aimed at fostering innovation and technical prowess among budding developers and technology enthusiasts. </p>
+                    <p class="blog-date">July 05, 2024</p>
+                </div>
+            </div>
+        </div>
+        <style>
+            .featured-blog {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Adjust alignment */
+            padding: 20px;
+            background-color: #12121200;
+            }
+        </style>
+    </section>
+    
+    <section class="blog-list">
+        <div class="blog-container">
+            {% for blog in blogs %}
+            <a href="{% url 'blog_detail' blog.id %}" class="blog-item">
+                <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                <div class="blog-text">
+                    <h3>{{ blog.title }}</h3>
+                    <p>{{ blog.overview | truncatechars:199 }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section company">
+                <p>&copy; 2024 Abhiraj Adhikary. Powered by <span style="color: #00ffd5;">Django</span></p>
+            </div>
+            
+            <div class="footer-section support">
+                <p>Support</p>
+                <a href="mailto:your-email@example.com">Email</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+            
+            <div class="footer-section follow-us">
+                <p>Follow us</p>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+            </div>
+            
+            <div class="footer-section legal">
+                <p>Legal</p>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'all_blogs.js' %}"></script> 
+</body>
+</html>

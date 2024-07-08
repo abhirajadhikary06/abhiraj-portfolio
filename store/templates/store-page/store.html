@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Store</h1>
+        
+        <h2 class="mb-3">Affiliate Products</h2>
+        <div class="row">
+            {% for product in affiliate_products %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.detail }}">
+                    <div class="card-body">
+                        <h5 class="product-name">{{ product.name }}</h5>
+                        <h6 class="card-title">{{ product.get_category_display }}</h6>
+                        <p class="card-text">{{ product.detail }}</p>
+                        <a href="{{ product.link }}" class="btn btn-primary" target="_blank">View Product</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h2 class="mt-5 mb-3">Goodies</h2>
+        <div class="row">
+            {% for goodie in goodies %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ goodie.image.url }}" class="card-img-top" alt="{{ goodie.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ goodie.name }}</h5>
+                        <p class="card-text">${{ goodie.price }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

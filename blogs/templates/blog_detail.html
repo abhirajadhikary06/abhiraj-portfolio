@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ blog.title }}</title>
+    <!--<link rel="stylesheet" href="{% static 'blog_detail.css' %}">-->
+</head>
+<body>
+    <iframe src="{% static 'scroll-effect.html' %}" class="background-iframe"></iframe>
+    <nav>
+        <div class="nav-container">
+            <a href="{% url 'portfolio' %}">Portfolio</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'store' %}">Store</a>
+            <a href="{% url 'all_blogs' %}">Blogs</a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="blog-container">
+                <h1>{{ blog.title }}</h1>
+                <div class="body-section my-4">
+                    <p>{{ blog.body | safe | linebreaks }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <p style="font-family: monospace; font-size: larger; font-weight: bolder; color: #ffffff;">Image Credit</p>
+            <img src="{% static 'bg images/pinterest-logo.png' %}" alt="Descriptive Alt Text">
+        </div>
+    </main>
+</body>
+</html>
+
+<style>
+body {
+    margin: 0;
+    font-family: monospace;
+    display: flex; /* Default display mode for body */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    display: inline-block; /* Adjust width to content */
+    position: relative;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 100px; 
+    color: #fff;
+    z-index: 1; /* Ensure the container is above the background */
+    background-color: rgba(0, 0, 0, 0.801); /* Set background color for the rectangle */
+}
+
+.container h1, .container p {
+    color: #fff;
+}
+
+.blog-container {
+    display: block; 
+    flex-direction: column; /* Adjust if needed */
+    align-items: center; /* Center items horizontally */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    max-width: 800px; 
+    margin: auto; /* Center horizontally and adjust top margin as needed */
+    position: relative; /* Ensure the container respects stacking */
+    z-index: 2; /* Place the blog container above the .container */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    background-color: rgba(27, 27, 27, 0.8);
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+.nav-container a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px;
+    transition: background-color 0s, color 0s;
+    outline: none;
+}
+
+.nav-container a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50px;
+    outline: none;
+    box-shadow: 0 0 15px 1px #ffffff; /* Adjust the values as needed */
+}
+
+.background-iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border: none;
+}
+
+.empty {
+    margin-top: 80px;
+}
+
+.image-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.image-container img {
+    max-width: 100px;
+    height: auto;
+}
+
+.image-container p{
+    margin-right: 10px;
+}
+
+</style>

@@ -1,0 +1,200 @@
+body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #0D1117;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #0D1117;
+    color: white;
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+}
+
+.status-img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    bottom: 23px;
+    right: 23px;
+    border: 3px solid #0D1117;
+    background-color: #0d1117;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 100px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 65px;
+    right: -25px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+}
+
+.profile-container a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.sidebar h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.sidebar p {
+    font-size: 20px;
+    color: #818A93;
+}
+
+.sidebar .title, .sidebar .skills {
+    color: white;
+    font-size: 18px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    display: inline;
+}
+
+.icon-list {
+    list-style: none;
+    padding: 0;
+}
+
+.icon-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.icon-list li img {
+    height: 16px;
+    max-width: 100%;
+    margin-right: 10px;
+}
+
+.content {
+    padding: 20px;
+    width: calc(75% - 40px);
+    color: white;
+    border: 1px solid #636B75;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+    margin-left: 3px;
+}
+
+.content h1 {
+    color: #ffffff;
+}
+
+.section-divider {
+    border-bottom: 1px solid #636B75;
+    margin-bottom: 20px;
+}
+
+.skills {
+    margin-bottom: 20px;
+}
+
+.skills h2, .connect h2 {
+    margin-bottom: 10px;
+}
+
+.connect-button {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-family: monospace;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.connect-button:hover {
+    background-color: #30363d;
+    border-color: #21262d;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #ffeb3b;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.achievements, .badges, .connect {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.achievement, .badges img, .connect a {
+    margin: 10px;
+}
+
+.achievement img, .badges img, .connect img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.top-right-icon {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.top-right-icon {
+    position: absolute;
+    top: 20px; /* Adjust positioning as needed */
+    right: 40px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.pen-icon {
+    width: 15px; /* Adjust size as needed */
+    height: 15px;
+    cursor: pointer;
+    position: relative; /* Ensure relative positioning for absolute child */
+}
+
+
+footer {
+    color: white;
+    margin-top: 20px;
+}
+

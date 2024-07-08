@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me Page</title>
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+</head>
+<body>
+    <div class="emoji-container"></div>
+    <form action="https://formsubmit.co/mastiyurko@gufum.com" method="POST">
+        <div class="placeholder-container">
+            <div class="image-box">
+                <img src="{% static 'mailbox.png' %}" alt="Mailbox" class="mailbox-image">
+                <span class="mail-text">Mail to connect <i><span style="font-weight: 900;">Abhiraj!</span></i></span>
+            </div>
+
+            <input style="font-family: monospace;" type="email" class="placeholder" name="email" placeholder="Enter Email Id" required>
+            <input style="font-family: monospace;" type="text" class="placeholder" name="name" placeholder="Enter Name" required>
+            <textarea style="font-family: monospace;" class="placeholder message-area" name="message" placeholder="Write your message here" required></textarea>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="{% url '404' %}">
+            <button class="submit-button"></button>
+        </div>
+    </form>
+
+    <script src="{% static 'contact.js' %}"></script>
+</body>
+</html>

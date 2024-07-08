@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhiraj Adhikary's Profile</title>
+    <link rel="stylesheet" href="{% static 'portfolio.css' %}">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="profile-container">
+            <img src="{% static 'profile2.jpeg' %}" alt="Profile Picture" class="profile-img">
+            <a href="{% url 'store' %}">
+                <img src="{% static 'icons/store-icon.png' %}" alt="Status Image" class="status-img">
+                <div class="tooltip">Shop Here</div>
+            </a>
+        </div>
+
+        <h1>Abhiraj Adhikary</h1>
+        <p>abhirajadhikary06 · he/him</p>
+        <p class="title">Developer @ RedditRover</p>
+        <p class="skills">DSA | HTML | CSS | JS | MySQL | PostgreSQL | Python | R | C | Django | Flask | Bootstrap</p>
+
+        <a href="{% url 'contact' %}"><button class="connect-button" style="font-family: monospace;">Connect Me</button></a>
+
+        
+        <ul class="icon-list">
+            <li style="font-size: 14px;"><img src="{% static 'icons/education.png' %}" alt="Education Icon">Haldia Institute Of Technology</li>
+            <li><img src="{% static 'icons/flag.png' %}" alt="Location Icon">India</a></li>
+            <li><img src="{% static 'icons/email.png' %}" alt="Email Icon"> <a href="mailto:abhirajadhikary06@gmail.com">abhirajadhikary06@gmail.com</a></li>
+            <li><img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn Icon"> <a href="https://www.linkedin.com/in/abhirajadhikary06">in/abhirajadhikary06</a></li>
+            <li><img src="{% static 'icons/github.png' %}" alt="GitHub Icon"> <a href="https://github.com/abhirajadhikary06">github/abhirajadhikary06</a></li>
+            <li><img src="{% static 'icons/figma.png' %}" alt="Figma Icon"> <a href="https://www.figma.com/@creator_abhiraj">figma/@creator_abhiraj</a></li>
+            <li><img src="{% static 'icons/leetcode.png' %}" alt="LeetCode Icon"> <a href="https://leetcode.com/u/0vz9vQHr2y/">leetcode/abhirajadhikary06</a></li>
+            <li><img src="{% static 'icons/hackerrank.png' %}" alt="HackerRank Icon"> <a href="https://www.hackerrank.com/profile/abhirajadhikary1">hackerrank/abhirajadhikary</a></li>
+            <li style="font-size: 14px;"><img src="{% static 'icons/rocket.png' %}" alt="Cake Icon">D.O.B 08/07/2006</li>
+        </ul>
+
+    </div>
+
+    <div class="content">
+
+        <div class="top-right-icon">
+            <a href="{% url 'all_blogs' %}">
+                <img src="{% static 'icons/pen-icon.png' %}" alt="Pen Icon" class="pen-icon">
+            </a>
+            <div class="tooltip">Read Blogs</div>
+        </div>
+        
+        
+        
+        <div class="top-left-text">abhirajadhikary/ABOUT.me</div>
+        <div class="main-content">
+            <div class="banner">
+                <h1><center>🔥 Hi there! I'm Abhiraj Adhikary <span><img src="{% static 'icons/hello.gif' %}" width="50" style="vertical-align: middle;"></center></h1>
+                <section id="introduction" class="section-divider"></section>
+            </div>
+
+            <div class="about-me">
+                <p style="font-weight: 600; font-size: 14px;">Data Science & Software Engineering Enthusiast | Open Source Contributor | Graphic Designer</p>
+                <p style="font-size: 14px;">🌱 I'm currently learning about: Web Development (Flask & Django) and MERN.</p>
+                <p style="font-size: 14px;">💬 Ask me about Python / SQL / Web Dev / Designing / Anything.</p>
+                <p style="font-size: 14px;">📫 How to reach me: <a href="mailto:abhirajadhikary06@gmail.com" style="color: #2D93F8;">abhirajadhikary06@gmail.com</a></p>
+                <p style="font-size: 14px;">⚡ About me: I am a proactive professional with a strong foundation in programming and web development.</p>
+                <p style="font-size: 14px;">💪 My strengths in smart work, rapid adaptation, and critical thinking enable me to deliver effective solutions.</p>
+                <p style="font-size: 14px;">🌍 I know English, Hindi, Bengali.</p>
+                <p style="font-size: 14px;">🇮🇳 From India</p>
+            </div>
+
+            <h2>Skills and Expertise</h2>
+            <section id="skills" class="section-divider"></section>
+            <h3>Programming Languages:</h3>
+            <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"></a>
+            <a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R"></a>
+            <a href="https://en.wikipedia.org/wiki/C_(programming_language)"><img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white" alt="C"></a>
+
+            <h3>Web Development:</h3>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"></a>
+            <a href="https://www.figma.com/"><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"></a>
+
+            <h3>Frameworks:</h3>
+            <a href="https://www.djangoproject.com/"><img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django"></a>
+            <a href="https://flask.palletsprojects.com/"><img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"></a>
+            <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"></a>
+    
+            <h3>Database Management:</h3>
+            <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"></a>
+            <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"></a>
+            <a href="https://www.microsoft.com/en-us/sql-server"><img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server"></a>
+
+            <h3>Collaboration Tools:</h3>
+            <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"></a>
+            <a href="https://github.com/"><img src="https://img.shields.io/badge/GitHub-161717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+
+            <h3>Problem Solving:</h3>
+            <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"></a>
+
+            <h2>Projects 🧑‍💻</h2>
+            <section id="connect" class="section-divider"></section>
+            <a href="https://redditrover.pythonanywhere.com"><img src="https://img.shields.io/badge/Reddit%20Rover-Top%20reddit%20feed%20scraper-596AFF?style=for-the-badge&labelColor=white&logo=" alt="Reddit Rover"></a>
+            
+            <h2>Connect with me :)</h2>
+            <section id="connect" class="section-divider"></section>
+            <a href="https://www.linkedin.com/in/abhirajadhikary06"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+            <a href="https://www.hackerrank.com/profile/abhirajadhikary1"><img src="https://img.shields.io/badge/Hackerrank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white" alt="Hackerrank"></a>
+            <a href="https://leetcode.com/u/0vz9vQHr2y/"><img src="https://img.shields.io/badge/Leetcode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="Leetcode"></a>
+            <a href="https://github.com/abhirajadhikary06"><img src="https://img.shields.io/badge/GitHub-161717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+            <a href="https://devfolio.co/@abhirajadhikary"><img src="https://img.shields.io/badge/Devfolio-Profile-9cf?style=for-the-badge&logo=devfolio" alt="Devfolio"></a>
+
+            <footer>
+                <p><em>THANK YOU FOR VISITING! DO FOLLOW AND STAY <strong>CONNECTED</strong></em></p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- CSS Code for CONNECT BUTTON goes here -->
+
+<style>
+.connect-button {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-family: monospace;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-bottom: 15px;
+    margin-top: -3px;
+}
+
+.connect-button:hover {
+    background-color: #30363d;
+    border-color: #21262d;
+}
+
+</style>
+
+<style>
+    /* Add a media query for adjusting content based on device width */
+    @media only screen and (max-width: 600px) {
+        /* Example styles for smaller screens */
+        body {
+            font-size: 14px; /* Adjust font size */
+        }
+        .sidebar {
+            display: none; /* Hide sidebar on smaller screens */
+        }
+        .content {
+            width: 100%; /* Full width content on smaller screens */
+        }
+        /* Adjust other elements as needed */
+    }
+</style>
