@@ -119,15 +119,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    BASE_DIR / 'portfolio' / 'templates' / 'portfolio-page' / 'static',
-    BASE_DIR / 'portfolio' / 'templates' / 'contact-page' / 'static',
-    BASE_DIR / 'portfolio' / 'templates' / '404error-page' / 'static',
-    BASE_DIR / 'store' / 'templates' / 'store-page' / 'static',
-    BASE_DIR / 'blogs' / 'templates' / 'static',
+    os.path.join(BASE_DIR, 'portfolio', 'templates', 'portfolio-page', 'static'),
+    os.path.join(BASE_DIR, 'portfolio', 'templates', 'contact-page', 'static'),
+    os.path.join(BASE_DIR, 'portfolio', 'templates', '404error-page', 'static'),
+    os.path.join(BASE_DIR, 'store', 'templates', 'store-page', 'static'),
+    os.path.join(BASE_DIR, 'blogs', 'templates', 'static'),
 ]
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
